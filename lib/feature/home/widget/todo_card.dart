@@ -41,7 +41,7 @@ class TodoCard extends StatelessWidget {
                   style: TextStyle(color: secondaryColor, fontWeight: FontWeight.w700)
                 ),
               ),
-              IconButton(
+              data.isDone ? const SizedBox.shrink() : IconButton(
                 onPressed: () => onRemove(data.id),
                 icon: Icon(Icons.delete_outline_rounded)
               )
