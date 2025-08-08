@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
         if (value != null && value.isNotEmpty) {
           if (mounted) {
             Navigator.popAndPushNamed(
-              context, HomePage.routeName, arguments: nameCtrl.text
+              context, HomePage.routeName, arguments: value
             );
           } else {
             _provider.setLoading = false;
