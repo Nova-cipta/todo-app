@@ -41,7 +41,7 @@ class TodoCard extends StatelessWidget {
                   style: TextStyle(color: secondaryColor, fontWeight: FontWeight.w700)
                 ),
               ),
-              data.isDone ? const SizedBox.shrink() : IconButton(
+              IconButton(
                 onPressed: () => onRemove(data.id),
                 icon: Icon(Icons.delete_outline_rounded)
               )
@@ -55,7 +55,7 @@ class TodoCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Due date:\n${data.date}"),
-              FilledButton(
+              data.isDone ? const SizedBox.shrink() : FilledButton(
                 style: FilledButton.styleFrom(
                   backgroundColor: tertiaryColor,
                   shape: RoundedRectangleBorder(
